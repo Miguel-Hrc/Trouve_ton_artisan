@@ -33,7 +33,7 @@ const DetailPage = () => {
       recipient : recipient.value ,
     } ;
 
-    let response = await fetch ( "http://localhost:3000/DetailPage" , {
+    let response = await fetch ( "https://trouve-ton-artisan-mocha.vercel.app/DetailPage" , {
       method : "POST" ,
       headers : {
         "Content-Type" : "application/json;charset=utf-8" ,
