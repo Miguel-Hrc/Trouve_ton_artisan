@@ -54,7 +54,7 @@ export const Header = () => {
                 <div className={menu_class}> 
                 <div className="row">
                     <div style={{ color: "white" , paddingTop: "10vh" , fontSize: "5vw" , textDecoration: "none" , paddingRight: "2vw" , paddingLeft: "10vw" }} onClick={updateMenu}>x</div>
-                    <Link style={{ color: "white" , paddingTop: "2vh" , fontSize: "4vw" , textDecoration: "none" , paddingRight: "2vw" , paddingLeft: "15vw" }} to="/*" onClick={updateMenu}>Bâtiment</Link>
+                    <Link style={{ color: "white" , paddingTop: "2vh" , fontSize: "4vw" , textDecoration: "none" , paddingRight: "2vw" , paddingLeft: "15vw" }} to="/Bâtiment" onClick={updateMenu}>Bâtiment</Link>
                     <Link style={{ color: "white" , paddingTop: "10vh" , fontSize: "4vw" , textDecoration: "none" , paddingRight: "2vw" , paddingLeft: "15vw" }} to="/*" onClick={updateMenu}>Fabrication</Link>
                     <Link style={{ color: "white" , paddingTop: "10vh" , fontSize: "4vw" , textDecoration: "none" , paddingRight: "2vw" , paddingLeft: "15vw" }} to="/*" onClick={updateMenu}>Alimentation</Link>  
                     <Link style={{ color: "white" , paddingTop: "10vh" , fontSize: "4vw" , textDecoration: "none" , paddingRight: "2vw" , paddingLeft: "15vw" }} to="/*" onClick={updateMenu}>Services</Link>

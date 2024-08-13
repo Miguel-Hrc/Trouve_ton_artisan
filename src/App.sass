@@ -43,11 +43,29 @@ p , .footer__item
   font-family: "Gotham-Light"
   font-weight: 500
 
-
-.result__searching-item 
+.menu__item
   color: #00497c
+  text-decoration: none
+  font-family: "Gotham-Bold"
 
+  .active 
+    color: #dbdbdb
+  
   :hover 
-    color: black
+    color: #bdbdbd
+
+
+
+.menu__item--is-open
+  color: #00497c
+  text-decoration: none
+  font-family: "Gotham-Bold"
+
+
+.menu__item--is-open::before 
+    content: '➜'
+    color: #00497c
+    margin-right: 2vw
+
 
 
