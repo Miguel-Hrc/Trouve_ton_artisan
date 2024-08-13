@@ -38,6 +38,9 @@ Remplacer le dossier "src" par le dossier "src" de ce répertoire. de même pour
 Récupérer l'url dans le terminal (exemple: ➜ Local: http://localhost:3000) puis copier le dans votre navigateur. )
 
 Pour tester l'envoie de mail remplacer les "***" de "users" et "pass" dans le fichier "server.js" par les données de l'inbox de votre application mailtrap. changer le nombre du port à ecouter selon le votre dans la ligne : app.listen ( 3000 , ( ) => console.log ( "Server Running" ) ) ;
+changer aussi le chemin d'acces à la page de detail dans le fichier DetailPage: let response = await fetch ( "http://localhost:3000/DetailPage" , {
+      [...]
+    } ) ;
 lancer le terminale avec la commande >Node server.js
 puis tester l'envoie de mail (il y a eu un bug avec l'envoie de mail, ajouter le fichier config-ovverides.js à la source de votre dossier react pour pouvoir envoyer le  mail sans problème)
 
