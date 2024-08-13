@@ -12,6 +12,8 @@ cd name-app
 
 npm install react-router-dom
 
+npm install sass
+
 npm run start
 
 (Pour reprendre ce code :
