@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 import BackgroundImgPhone from '../assets/img/BackgroundImgPhone.jpg';
+import pngTriangle from '../assets/img/pngTriangle.png';
+import Footer from '../Component/Footer';
 
 export const Home = () => {
 
@@ -54,6 +56,10 @@ export const Home = () => {
             </div>  
           </div>
         </section>
+        <img src={pngTriangle} style={{ position: "relative" , zIndex: "2" , height: "110px" , marginTop: "-450px" , marginLeft: "30vw" , transform: "rotate(90deg)" }} alt="BackgroundImg2"></img>
+        <div style={{ position: "relative" , zIndex: "-1" ,  marginTop: "-300px" }}>
+          <Footer />
+        </div>
     </main>
     
   );
