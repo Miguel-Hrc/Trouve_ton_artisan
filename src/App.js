@@ -4,6 +4,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home';
 import Header from './Component/Header';
 import Bâtiment from './Pages/Bâtiment';
+import Fabrication from './Pages/Fabrication';
+import Alimentation from './Pages/Alimentation';
+import Services from './Pages/Services';
 
 function App() {
   return (
@@ -12,6 +15,9 @@ function App() {
       <Routes>      
         <Route path="/" element={<Home />}/>
         <Route path="/Bâtiment" element={<Bâtiment />} />
+        <Route path="/Fabrication" element={<Fabrication />} />
+        <Route path="/Alimentation" element={<Alimentation />} />
+        <Route path="/Services" element={<Services />} />
       </Routes>  
   </BrowserRouter>
   );
