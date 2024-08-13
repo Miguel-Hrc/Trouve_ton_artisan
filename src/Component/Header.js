@@ -2,8 +2,49 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/img/Logo.png';
 import { useState, React } from 'react';
 import './navbar.sass'
+import artisans from '../myData';
 
-export const Header = () => {
+export const Header = ({setResultsName}) => {
+    const [ input , setInput ] = useState ( "" ) ;
+
+  const fetchDataName = ( value ) => {
+    const results = artisans.filter( ( artisan ) => {
+      return (
+        (
+          value &&
+          artisan &&
+          artisan.name &&
+          artisan.name.toLowerCase ( ).includes ( value.toLowerCase ( ) )
+        ) ||   
+        (
+          value &&
+          artisan &&
+          artisan.location &&
+          artisan.location.toLowerCase ( ).includes ( value.toLowerCase ( ) )
+        ) ||   
+        (
+          value &&
+          artisan &&
+          artisan.specialty &&
+          artisan.specialty.toLowerCase ( ).includes ( value.toLowerCase ( ) )
+        ) 
+      ) 
+    } ) ;
+    
+    setResultsName ( results ) ;
+    
+  } ;
+
+  const handleChange = ( value ) => {
+    setInput ( value ) ;
+    fetchDataName ( value );
+    
+  } ;
+  const handleClick = (  ) => {
+    setInput ( "" ) ;
+    fetchDataName ( "" );
+    
+  } ;
 
     const [ burger_class , setBurgerClass ] = useState ( "burger-bar unclicked" )
     const [ menu_class , setMenuClass ] = useState ( "menu hidden" )
@@ -40,6 +81,9 @@ export const Header = () => {
                             id="searching__item"
                             type="text"
                             placeholder="🔍Rechercher"
+                            value={input}
+                            onChange={(e) => handleChange(e.target.value)}
+                            onClick={(e) =>  handleClick(e.target.value)}
                         />
                     <div id="burger__menu" className="col col-1" style={{ marginBottom: "60px" }}>
                         <div className="burger__menu-container" onClick={updateMenu}>
