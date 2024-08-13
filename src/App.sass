@@ -1,6 +1,5 @@
 
 
-
 @font-face 
   font-family: "Gotham-Light"
   src: url('./assets/fonts/Gotham-Light.woff')
@@ -22,6 +21,7 @@ main
     padding: 0
     margin: 0
 
+
 #background__img
   width: 100vw
 
@@ -34,7 +34,13 @@ main
 h2 , h5 
   font-family: "Gotham-Bold"
 
-p , .footer__item
+
+h3 
+  font-size: 1vw
+  font-family: "Gotham-Bold"
+
+
+p , li , label , .footer__item
   font-family: "Gotham-Light"
   font-weight: 600
 
@@ -42,6 +48,31 @@ p , .footer__item
 .footer__item
   font-family: "Gotham-Light"
   font-weight: 500
+
+
+ul 
+  list-style: none
+  display: flex
+
+
+.menu__item--is-open
+  color: #00497c
+  text-decoration: none
+  font-family: "Gotham-Bold"
+
+
+.menu__item--is-open::before 
+    content: '➜'
+    color: #00497c
+    margin-right: 2vw
+  
+
+.nav__item 
+  color: black
+
+  :hover 
+    color: #bdbdbd
+
 
 .menu__item
   color: #00497c
@@ -55,17 +86,11 @@ p , .footer__item
     color: #bdbdbd
 
 
-
-.menu__item--is-open
+.result__searching-item 
   color: #00497c
-  text-decoration: none
-  font-family: "Gotham-Bold"
 
-
-.menu__item--is-open::before 
-    content: '➜'
-    color: #00497c
-    margin-right: 2vw
+  :hover 
+    color: black
 
 
 
