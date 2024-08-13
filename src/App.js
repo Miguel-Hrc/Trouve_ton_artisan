@@ -7,6 +7,7 @@ import Bâtiment from './Pages/Bâtiment';
 import Fabrication from './Pages/Fabrication';
 import Alimentation from './Pages/Alimentation';
 import Services from './Pages/Services';
+import DetailPage from './Pages/DetailPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/Fabrication" element={<Fabrication />} />
         <Route path="/Alimentation" element={<Alimentation />} />
         <Route path="/Services" element={<Services />} />
+        <Route path="artisans/:artisanId" element={<DetailPage />} />
       </Routes>  
   </BrowserRouter>
   );
