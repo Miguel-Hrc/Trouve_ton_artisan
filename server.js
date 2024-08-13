@@ -22,8 +22,8 @@ app.listen ( 3000 , ( ) => console.log ( "Server Running" ) ) ;
 const contactEmail = nodemailer.createTransport ( {
     host: "sandbox.smtp.mailtrap.io" ,
     auth: {  
-      user: "ce941b2aca0905" ,
-      pass: "2d0bde8590f43d" ,
+      user: "**************" ,
+      pass: "**************" ,
     } ,
 } ) ;
 
