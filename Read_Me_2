@@ -27,6 +27,8 @@ npm install nodemailer
 
 npm install express
 
+npm install react-responsive
+
 npm run start
 
 (Pour reprendre ce code :
