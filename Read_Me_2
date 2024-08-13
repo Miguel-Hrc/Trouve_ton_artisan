@@ -1,0 +1,21 @@
+Prérequis : VS code, Node.js
+
+(it's a React application )
+
+USAGE :
+
+Terminal:
+
+npx create-react-app name-app
+
+cd name-app
+
+npm install react-router-dom
+
+npm run start
+
+(Pour reprendre ce code :
+
+Remplacer le dossier "src" par le dossier "src" de ce répertoire. de même pour le dossier "public".
+
+Récupérer l'url dans le terminal (exemple: ➜ Local: http://localhost:3000) puis copier le dans votre navigateur. )
