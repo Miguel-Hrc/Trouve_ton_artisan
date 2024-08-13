@@ -15,6 +15,39 @@ const DetailPage = () => {
   const { artisanId } = useParams ( ) ;
 
   const artisan = artisans.find ( ( artisan ) => artisan.id === parseInt ( artisanId ) ) ;
+
+  const [ status , setStatus ] = useState ( "Submit" ) ;
+
+  const handleSubmit = async (e) => {
+    e.preventDefault ( ) ;
+    setStatus ( "Sending..." ) ;
+
+    const { name , email , message , recipient } = e.target.elements ;
+
+    let details = {
+      name : name.value ,
+      email : email.value ,
+      message : message.value ,
+      recipient : recipient.value ,
+    } ;
+
+    let response = await fetch ( "http://localhost:3000/DetailPage" , {
+      method : "POST" ,
+      headers : {
+        "Content-Type" : "application/json;charset=utf-8" ,
+      },
+      body : JSON.stringify ( details ) ,
+    } ) ;
+
+    setStatus ( "Submit" ) ;
+
+    let result = await response.json ( ) ;
+
+    alert ( result.status ) ;
+
+    e.target.reset ( ) ;
+
+  } ;
   
   return (
     
@@ -44,7 +77,7 @@ const DetailPage = () => {
         </div>
         <div style={{ position: "relative" , zIndex: "1" , background: "#f1f8fc" ,  width: "95vw" , height: "800px" , marginTop:"-900px" , paddingLeft: "10vw" , paddingTop: "100px" , paddingRight: "10vw" , paddingBotom: "100px" }}>
           <h2 style={{ color: "#00497c", fontSize: "4.5vw" , paddingBotom: "100px" }}>Envoie un message à ton artisan :</h2>
-          <form style={{ fontSize: "4vw" , paddingTop: "50px" }}>  
+          <form onSubmit={handleSubmit} style={{ fontSize: "4vw" , paddingTop: "50px" }}>  
             <div className="mb-3">
               <label htmlFor="name">Name:</label>
               <input type="text" id="name" className="form-control" rows="1" required placeholder="name" autoComplete="given-name"/>
@@ -61,7 +94,7 @@ const DetailPage = () => {
               <label htmlFor="recipient" className="visually-hidden">Email</label>
               <input type="text" readOnly className="form-control-plaintext" id="recipient" defaultValue={artisan.email}></input>
             </div>
-            <button className="btn btn-secondary" style={{ fontSize: "4.5vw", backgroundColor:"#00497c" , marginTop:"20px" }} type="submit">Submit</button>
+            <button className="btn btn-secondary" style={{ fontSize: "4.5vw", backgroundColor:"#00497c" , marginTop:"20px" }} type="submit">{status}</button>
           </form>
         </div>   
         <img src={pngTriangle} style={{ position: "relative" , zIndex: "2" , height: "110px" , marginTop: "40px" , marginLeft: "30vw" , transform: "rotate(90deg)" }} alt="BackgroundImg2"></img>
