@@ -2,7 +2,7 @@ import './App.sass';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home';
-import Header from './Component/Header';
+import SearchBar from './Component/SearchBar';
 import Bâtiment from './Pages/Bâtiment';
 import Fabrication from './Pages/Fabrication';
 import Alimentation from './Pages/Alimentation';
@@ -13,7 +13,7 @@ import Page404 from './Pages/Page404';
 function App() {
   return (
     <BrowserRouter>
-      <Header />
+      <SearchBar />
       <Routes>      
         <Route path="/" element={<Home />}/>
         <Route path="/Bâtiment" element={<Bâtiment />} />
