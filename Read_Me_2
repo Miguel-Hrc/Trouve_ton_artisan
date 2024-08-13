@@ -16,6 +16,10 @@ npm install sass
 
 npm install bootstrap
 
+npm install @mui/material @emotion/react @emotion/styled
+
+npm install @mui/material @mui/styled-engine-sc styled-components
+
 npm run start
 
 (Pour reprendre ce code :
