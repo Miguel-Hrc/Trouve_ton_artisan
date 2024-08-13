@@ -1,6 +1,7 @@
 Prérequis : VS code, Node.js
 
-(it's a React application )
+(c'est application React )
+(réception d'email avec le site Mailtrap)
 
 USAGE :
 
@@ -20,6 +21,12 @@ npm install @mui/material @emotion/react @emotion/styled
 
 npm install @mui/material @mui/styled-engine-sc styled-components
 
+npm install cors
+
+npm install nodemailer
+
+npm install express
+
 npm run start
 
 (Pour reprendre ce code :
@@ -27,3 +34,7 @@ npm run start
 Remplacer le dossier "src" par le dossier "src" de ce répertoire. de même pour le dossier "public".
 
 Récupérer l'url dans le terminal (exemple: ➜ Local: http://localhost:3000) puis copier le dans votre navigateur. )
+
+Pour tester l'envoie de mail remplacer les "***" de "users" et "pass" dans le fichier "server.js" par les données de l'inbox de votre application mailtrap. changer le nombre du port à ecouter selon le votre dans la ligne : app.listen ( 3000 , ( ) => console.log ( "Server Running" ) ) ;
+lancer le terminale avec la commande >Node server.js
+puis tester l'envoie de mail
