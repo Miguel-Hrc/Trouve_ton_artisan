@@ -8,6 +8,7 @@ import Fabrication from './Pages/Fabrication';
 import Alimentation from './Pages/Alimentation';
 import Services from './Pages/Services';
 import DetailPage from './Pages/DetailPage';
+import Page404 from './Pages/Page404';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/Alimentation" element={<Alimentation />} />
         <Route path="/Services" element={<Services />} />
         <Route path="artisans/:artisanId" element={<DetailPage />} />
+        <Route path="/*" element={<Page404 />} />
       </Routes>  
   </BrowserRouter>
   );
