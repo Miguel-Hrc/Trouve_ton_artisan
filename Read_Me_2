@@ -29,6 +29,8 @@ npm install express
 
 npm install react-responsive
 
+npm install react-app-rewired --save-dev
+
 npm run start
 
 (Pour reprendre ce code :
