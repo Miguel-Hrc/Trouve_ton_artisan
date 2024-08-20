@@ -31,6 +31,8 @@ npm install react-responsive
 
 npm install react-app-rewired --save-dev
 
+npm install --save-dev buffer process
+
 npm run start
 
 (Pour reprendre ce code :
