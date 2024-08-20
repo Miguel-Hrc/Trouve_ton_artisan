@@ -17,7 +17,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-responsive": "^10.0.0",
-    "react-router-dom": "^6.26.0",
+    "react-router-dom": "^6.26.1",
     "react-scripts": "^5.0.1",
     "sass": "^1.77.8",
     "styled-components": "^6.1.12",
@@ -48,6 +48,8 @@
     ]
   },
   "devDependencies": {
+    "buffer": "^6.0.3",
+    "process": "^0.11.10",
     "react-app-rewired": "^2.2.1"
   }
 }
